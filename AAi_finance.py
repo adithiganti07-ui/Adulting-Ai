@@ -1,7 +1,7 @@
 import google.generativeai as genai
 import streamlit as st
 import sqlite3
-genai.configure(api_key='AIzaSyDiDshd1hSTki5ZQc5es4rcMFkGIw44ZKY')
+genai.configure(api_key='APIKEY')
 model=genai.GenerativeModel("gemini-1.5-flash")
 import sqlite3
 st.title("Finance")
@@ -43,3 +43,4 @@ Tone: encouraging, non-judgemental, simple. If any input is missing or unclear, 
 """
     response=model.generate_content(prompt)
     st.write(response.text)
+
