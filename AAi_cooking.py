@@ -2,7 +2,7 @@ import streamlit as st
 import google.generativeai as genai
 
 st.title("Cooking AI")
-genai.configure(api_key='AIzaSyDiDshd1hSTki5ZQc5es4rcMFkGIw44ZKY')
+genai.configure(api_key='APIKEY')
 model=genai.GenerativeModel("gemini-1.5-flash")
 if st.button("Main page"):
     st.switch_page("d:\python312\pages\AAi_Mainpage.py")
@@ -38,4 +38,5 @@ Tasks:
 """
     response=model.generate_content(prompt)
     st.write(response.text)
+
 
